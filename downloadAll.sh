@@ -22,6 +22,7 @@ for country in $countries; do
      		ERROR_MSG="Please verify name of : $country in wikipedia"
      		echo $ERROR_MSG 
      		echo $ERROR_MSG >> $ERROR_FILE_NAME
+     		rm svg/$country.svg
      	fi
 	fi
 done
