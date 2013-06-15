@@ -1,3 +1,8 @@
 mkdir svg
 countries=( Canada Somalia)
-wget "https://en.wikipedia.org/wiki/File:Canada_(orthographic_projection).svg" -O svg/testname.svg
+for country in "${countries[@]}" 
+do
+    echo $country
+wget -q "https://en.wikipedia.org/wiki/File:$country%5F(orthographic_projection).svg" -O svg/$country.svg
+done
+
